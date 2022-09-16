@@ -69,6 +69,7 @@ reset.addEventListener("click", () => {
     winnerH1.innerHTML = ""
     won = x = y = 0
     playerY.innerHTML = `Yellow: ${y}`
+    playerX.innerHTML = `Red: ${x}`
     clear()
 })
 
