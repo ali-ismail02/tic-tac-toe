@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.ttt {
+    background-image: url(../images/board.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas:
+    "1 2 3"
+    "4 5 6"
+    "7 8 9";
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(3, 200px);
+    height: 600px;
+    width: 600px;
+}
+
+.box {
+    width: 160px;
+    height: 160px;
+    margin: 20px;
+}
+
+.x {
+    background-image: url(../images/red.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.y {
+    background-image: url(../images/yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ttt > *:nth-child(1){
+    grid-area: "1";
+}
+.ttt > *:nth-child(2){
+    grid-area: "2";
+}
+.ttt > *:nth-child(3){
+    grid-area: "3";
+}
+.ttt > *:nth-child(4){
+    grid-area: "4";
+}
+.ttt > *:nth-child(5){
+    grid-area: "5";
+}
+.ttt > *:nth-child(6){
+    grid-area: "6";
+}
+.ttt > *:nth-child(7){
+    grid-area: "7";
+}
+.ttt > *:nth-child(8){
+    grid-area: "8";
+}
+.ttt > *:nth-child(9){
+    grid-area: "9";
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#restart {
+    margin-right: 20px;
+}
+#reset {
+    margin-left: 20px;
+}
