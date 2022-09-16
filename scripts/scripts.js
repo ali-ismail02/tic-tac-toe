@@ -68,7 +68,7 @@ restart.addEventListener("click", () => {
 reset.addEventListener("click", () => {
     winnerH1.innerHTML = ""
     won = x = y = 0
-    playerY.innerHTML = `Yellow: ${y}`
+    playerY.innerHTML = `Yellow: ${x}`
     playerX.innerHTML = `Red: ${x}`
     clear()
 })
