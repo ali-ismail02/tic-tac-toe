@@ -13,6 +13,13 @@ let won =0
 
 // functions
 
+const clear = () => {
+    for(let i of boxes) {
+        if(i.classList.contains("x")) i.classList.remove("x")
+        if(i.classList.contains("y")) i.classList.remove("y")
+    }
+}
+
 const winner = (a,b,c,player) => {
     return boxes[a].classList.contains(player) && boxes[b].classList.contains(player) && boxes[c].classList.contains(player)
 }
@@ -51,3 +58,17 @@ for(let i of boxes) {
         }
     })
 }
+
+restart.addEventListener("click", () => {
+    winnerH1.innerHTML = ""
+    clear()
+    won=0
+})
+
+reset.addEventListener("click", () => {
+    winnerH1.innerHTML = ""
+    won = x = y = 0
+    playerY.innerHTML = `Yellow: ${y}`
+    clear()
+})
+
