@@ -21,8 +21,7 @@ body{
     "1 2 3"
     "4 5 6"
     "7 8 9";
-    grid-template-rows: repeat(3, 200px);
-    grid-template-columns: repeat(3, 200px);
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     height: 600px;
     width: 600px;
 }
@@ -45,34 +44,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.ttt > *:nth-child(1){
-    grid-area: "1";
-}
-.ttt > *:nth-child(2){
-    grid-area: "2";
-}
-.ttt > *:nth-child(3){
-    grid-area: "3";
-}
-.ttt > *:nth-child(4){
-    grid-area: "4";
-}
-.ttt > *:nth-child(5){
-    grid-area: "5";
-}
-.ttt > *:nth-child(6){
-    grid-area: "6";
-}
-.ttt > *:nth-child(7){
-    grid-area: "7";
-}
-.ttt > *:nth-child(8){
-    grid-area: "8";
-}
-.ttt > *:nth-child(9){
-    grid-area: "9";
 }
 
 .buttons {

@@ -47,14 +47,15 @@ const win = (player) => {
     }
 }
 
+
 for(let i of boxes) {
     i.addEventListener("click", () => {
         if(!i.classList.contains("x") && !i.classList.contains("y") && !won){
-            i.classList.add(player)
-            win(player)
-            if(player == "x"){
-                player = "y"
-            }else player = "x"
+            i.classList.add("x");
+            win(player);
+            //After we may a move, let the AI take his turn
+            let bestMove = findBestMove();
+            if(bestMove >= 0 && bestMove < 9) playBox("o", bestMove);
         }
     })
 }
@@ -73,3 +74,30 @@ reset.addEventListener("click", () => {
     clear()
 })
 
+//AI :)
+function minimax(board, depth, isMax)
+{
+    return -1;
+}
+
+function findBestMove()
+{
+    let maxScore = -500;
+    let bestMove = null;
+    for(let i of boxes)
+    {
+        if(!i.classList.contains("x") && !i.classList.contains("y"))
+        {
+            i.classList.add("y");
+            const score = minimax(board, 0, false);
+            i.classList.remove("y");
+
+            if (score > maxScore)
+            {
+                bestMove = i;
+                maxScore = score;
+            }
+        }
+    }
+    return i;
+}
